@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'fr-FR'
+title = 'Cours récapitulatif de HUGO & GH Pages'
+theme = "PaperMod"
