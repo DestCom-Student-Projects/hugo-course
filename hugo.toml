@@ -16,7 +16,6 @@ description = "Micro récapitulatif d'un cours de HUGO"
 author = "DestCom"
 ShowShareButtons = true
 
-
 [params.assets]
 favicon = "favicon.ico"
 favicon16x16 = "favicon-16x16.png"
@@ -25,6 +24,9 @@ favicon32x32 = "favicon-32x32.png"
 [params.homeInfoParams]
 Title = "Cours récapitulatif de HUGO & GH Pages"
 Content = "Retrouvez ici un court résumé de l'introduction a HUGO et Github Pages"
+
+[params.analytics.google]
+SiteVerificationTag = "zJ0i7OiRkxZG7S8VwurKRWZpzS-UHbf-PR1HJ7peb_Y"
 
 [[params.socialIcons]]
 name = "github"
