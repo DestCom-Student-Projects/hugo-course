@@ -11,6 +11,7 @@ home = [ "HTML", "RSS", "JSON" ]
 
 [params]
 ShowBreadCrumbs = true
+env = "production"
 
 [params.assets]
 favicon = "favicon.ico"
