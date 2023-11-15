@@ -26,6 +26,7 @@ body.dark #sideMenu #exit svg:hover {
   z-index: 30;
   background-color: var(--theme);
   width: 45%;
+  max-width: 30em;
   height: 100vh;
   padding: 1em;
   border-left: whitesmoke 1px solid;
