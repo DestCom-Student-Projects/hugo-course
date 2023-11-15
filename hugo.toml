@@ -12,6 +12,8 @@ home = [ "HTML", "RSS", "JSON" ]
 [params]
 ShowBreadCrumbs = true
 env = "production"
+description = "Micro récapitulatif d'un cours de HUGO"
+author = "DestCom"
 
 [params.assets]
 favicon = "favicon.ico"
