@@ -14,6 +14,8 @@ ShowBreadCrumbs = true
 env = "production"
 description = "Micro récapitulatif d'un cours de HUGO"
 author = "DestCom"
+ShowShareButtons = true
+
 
 [params.assets]
 favicon = "favicon.ico"
