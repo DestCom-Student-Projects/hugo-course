@@ -44,3 +44,21 @@ url = "https://stroygetter.stroyco.eu/"
 identfier = "search"
 name = "Search"
 url = "/search/"
+
+[[menu.main]]
+identfier = "posts"
+name = "All the posts"
+url = "/posts/"
+
+[[menu.main]]
+identfier = "home"
+name = "Home"
+url = "/"
+
+[[params.custom.externalSites]]
+name = "Portfolio"
+url = "https://portfolio.stroyco.eu/"
+
+[[params.custom.externalSites]]
+name = "StroyGetter"
+url = "https://stroygetter.stroyco.eu/"

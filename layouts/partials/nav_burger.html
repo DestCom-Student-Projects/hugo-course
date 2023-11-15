@@ -1,0 +1,70 @@
+{{- $currentPage := . }}
+<nav id="sideMenu" class="close">
+
+<div id="exit">
+    <svg id="exitIcon" xmlns="http://www.w3.org/2000/svg" height="329pt" viewBox="0 0 329.26933 329" width="329pt"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+</div>
+
+    <h2>Pages</h2>
+    <ul class="pagesLinks">
+        {{- range site.Menus.main }}
+            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+            {{- $page_url:= $currentPage.Permalink | absLangURL }}
+            {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
+            <li>
+                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                    {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
+                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                        {{- .Pre }}
+                        {{- .Name -}}
+                        {{ .Post -}}
+                    </span>
+                    {{- if (findRE "://" .URL) }}&nbsp;
+                        <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14L21 3"></path>
+                        </svg>
+                    {{- end }}
+                </a>
+            </li>
+        {{- end }}
+    </ul>
+
+    <h2>External sites</h2>
+    <ul class="externalLinks">
+        {{- range site.Params.custom.externalSites }}
+            <li>
+                <a href="{{ .url }}" title="{{ .name }}" target="_blank">
+                   <span>{{- .name -}} </span>
+                   <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        {{- end }}
+    </ul>
+
+    <div class="footer">
+        <span>{{ site.Copyright | markdownify }}</span>
+        <span>&copy; {{ now.Year }}
+            <a href="https://portfolio.stroyco.eu/">DestCom</a>
+        </span>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        const exit = document.getElementById("exitIcon");
+        const sideMenu = document.getElementById("sideMenu");
+
+        exit.addEventListener("click", function(event1) {
+            sideMenu.classList.toggle("close");
+            sideMenu.classList.toggle("open");
+            event1.stopPropagation();
+        });
+    });
+</script>

@@ -1,0 +1,79 @@
+body.dark #burger_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark #burger_menu svg,
+body.dark #sideMenu #exit svg {
+  filter: invert(1);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+body.dark #burger_menu svg:hover,
+body.dark #sideMenu #exit svg:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  background-color: var(--theme);
+  width: 45%;
+  height: 100vh;
+  padding: 1em;
+  border-left: whitesmoke 1px solid;
+}
+
+#sideMenu.close {
+  display: none;
+}
+
+#sideMenu.open {
+  display: block;
+}
+
+#sideMenu #exit {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sideMenu #exit svg {
+  width: 8%;
+  height: 100%;
+}
+
+#sideMenu ul {
+  list-style: none;
+}
+
+#sideMenu li {
+  display: flex;
+  justify-content: center;
+}
+
+#sideMenu a {
+  font-size: 1.5em;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+#sideMenu a:hover {
+  font-size: 1.5em;
+  opacity: 0.5;
+}
+
+#sideMenu .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
