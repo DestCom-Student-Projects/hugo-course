@@ -32,6 +32,10 @@ url = "https://github.com/DestroyCom"
 name = "other"
 url = "https://portfolio.stroyco.eu/"
 
+[[params.socialIcons]]
+name = "youtube"
+url = "https://stroygetter.stroyco.eu/"
+
 [[menu.main]]
 identfier = "search"
 name = "Search"

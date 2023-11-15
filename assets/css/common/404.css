@@ -1,0 +1,28 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.not-found img {
+  width: 20%;
+}
+
+.not-found h1 {
+  font-size: 4em;
+}
+
+.not-found h2 {
+  font-size: 2em;
+}
+
+.not-found a {
+  color: var(--primary);
+  background: var(--secondary);
+  border-radius: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 2em;
+}
