@@ -1,4 +1,35 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://destcom-student-projects.github.io/hugo-course/'
 languageCode = 'fr-FR'
 title = 'Cours récapitulatif de HUGO & GH Pages'
 theme = "PaperMod"
+
+[params.custom]
+logoName = "HUGO & Github Pages"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+ShowBreadCrumbs = true
+
+[params.assets]
+favicon = "favicon.ico"
+favicon16x16 = "favicon-16x16.png"
+favicon32x32 = "favicon-32x32.png"
+
+[params.homeInfoParams]
+Title = "Cours récapitulatif de HUGO & GH Pages"
+Content = "Retrouvez ici un court résumé de l'introduction a HUGO et Github Pages"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/DestroyCom"
+
+[[params.socialIcons]]
+name = "other"
+url = "https://portfolio.stroyco.eu/"
+
+[[menu.main]]
+identfier = "search"
+name = "Search"
+url = "/search/"
