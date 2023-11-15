@@ -1,19 +1,21 @@
 ---
 title: "Creez votre premier posts !"
 date: "2023-11-14T00:03:00Z"
+author: "DestCom"
+ShowReadingTime: true
 ---
 
-## Creer votre post
+## Créer votre post
 
-Une commande est la pour vous `hugo new content posts/my-first-post.md`
+Une commande est là pour vous : `hugo new content/posts/my-first-post.md`
 
-### Le FrontMatter
+### Le Front Matter
 
-Le frontmatter est une syntaxe qui vous permet de gerez vos metadonnées de vos posts
-Cette portion de code est en premiere partie de votre fichier, elle peux etre écrite en TOML, YAML ou JSON.
-Le frontmatter possede beaucoup de variable dont la liste est [ici](https://gohugo.io/content-management/front-matter/#front-matter-variables)
+Le front matter est une syntaxe qui vous permet de gérer les métadonnées de vos posts.
+Cette portion de code se situe en début de votre fichier. Elle peut être écrite en TOML, YAML ou JSON.
+Le front matter possède de nombreuses variables, dont la liste est disponible [ici](https://gohugo.io/content-management/front-matter/#front-matter-variables).
 
-Mais voici les plus courant
+Mais voici les plus courantes :
 
 ```toml
 ---
@@ -23,11 +25,11 @@ description: "Ma description"
 ---
 ```
 
-Tout les details sur le frontmatter sont retrouvable sur [https://gohugo.io/content-management/front-matter](https://gohugo.io/content-management/front-matter)
+Tous les détails sur le frontmatter sont disponibles sur [https://gohugo.io/content-management/front-matter](https://gohugo.io/content-management/front-matter).
 
 ### Le contenu de votre post
 
-Le contenu peux etre écrit soit en html, soit en Markdown.
+Le contenu peut être écrit soit en HTML, soit en Markdown.
 
 #### Petit rappel Markdown
 
@@ -111,9 +113,9 @@ Ceci est un texte préformaté
 </pre>
 ```
 
-##### List Types
+##### Types de listes
 
-###### Ordered List
+###### Listes ordonnées
 
 ```md
 1. First item
@@ -121,7 +123,7 @@ Ceci est un texte préformaté
 3. Third item
 ```
 
-###### Unordered List
+###### Listes non-ordonnées
 
 ```md
 - List item
@@ -129,7 +131,7 @@ Ceci est un texte préformaté
 - And another item
 ```
 
-###### Nested list
+###### Liste indentées
 
 ```md
 - Fruit
